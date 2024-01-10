@@ -1,0 +1,267 @@
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+button {
+  background-color: #3d3d3d !important;
+  color: #fff;
+}
+
+.btn {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 9;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  margin: auto;
+}
+
+nav.active {
+  background-color: #0099bf;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+nav.active a {
+  color: #fff !important;
+}
+
+nav.active a:hover {
+  color: #333 !important;
+}
+
+.navbar .logo a {
+  color: #000;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu {
+  display: flex;
+}
+.navbar .menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a {
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-hamburger {
+  position: relative;
+  display: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 7;
+}
+
+.nav-hamburger .bar,
+.nav-hamburger::after,
+.nav-hamburger::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.nav-hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.nav-hamburger.is-active:after {
+  transform: rotate(45deg) translate(-8px, -7px);
+}
+
+.nav-hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.nav-hamburger-btn {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 50px;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  background-color: #009bbf;
+  padding-top: 10rem;
+  z-index: 5;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.nav-hamburger-btn .mobile-nav.is-active {
+  left: 0;
+  z-index: 5;
+}
+
+.mobile-nav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 auto 16px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #333;
+    font-weight: 500;
+  }
+}
+
+.hero {
+  height: 100vh;
+}
+
+.about {
+  height: 100vh;
+  background-color: #009bbf;
+  color: white;
+}
+
+.newsletter {
+  padding: 80px 0;
+  background: #19beda;
+}
+
+.newsletter .content {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.newsletter .content h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+.newsletter .content .form-control {
+  height: 50px;
+  border-color: #ffffff;
+  border-radius: 0;
+}
+.newsletter .content.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #243c4f;
+}
+.newsletter .content .btn {
+  min-height: 50px;
+  border-radius: 0;
+  background: #243c4f;
+  color: #fff;
+  font-weight: 600;
+}
+
+.shop {
+  height: 100vh;
+}
+
+.shop .card {
+  color: white;
+}
+
+.contact {
+  height: 100vh;
+  background-color: #009bbf;
+}
+
+.contact h2 {
+  color: #fff;
+}
+
+.form__container {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.form__container button {
+  background-color: #009bbf;
+  color: white;
+}
+
+.footer {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.footer .nav-item a {
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    background-color: #009bbf !important;
+    box-shadow: none !important;
+  }
+  .navbar a {
+    color: white !important;
+  }
+
+  .navbar .menu {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: block;
+  }
+  .nav-hamburger-btn {
+    display: contents;
+  }
+
+  .hero {
+    margin-top: 8rem;
+    height: 100%;
+  }
+
+  .hero img {
+    display: none;
+  }
+  .about {
+    height: 100%;
+  }
+  .about img {
+    display: none;
+  }
+  .shop {
+    height: 100%;
+  }
+}
