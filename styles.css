@@ -101,6 +101,7 @@ nav.active i {
 }
 
 .mobile-nav {
+  display: none;
   position: fixed;
   top: 50px;
   left: 100%;
@@ -110,6 +111,10 @@ nav.active i {
   background-color: #006075;
   padding-top: 10rem;
   z-index: 5;
+}
+
+.mobile-nav.active {
+  display: block;
 }
 
 .mobile-nav.is-active {
@@ -168,6 +173,10 @@ nav.active i {
   background-color: #006075;
   color: white;
   overflow: hidden;
+}
+
+.about img {
+  height: 700px;
 }
 
 .reviews {
@@ -241,14 +250,18 @@ nav.active i {
 }
 
 .shop .btn {
+  margin-top: 0.6rem;
   background-color: #006075;
   color: white;
   transition: all 0.5s ease-in-out;
 }
 
 .shop .btn:hover {
+  background-color: #007691;
+}
+
+.shop .btn:hover {
   transform: translateY(-10px);
-  color: #000;
 }
 
 .contact {
@@ -283,6 +296,40 @@ nav.active i {
 
 .footer .nav-item a {
   color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    height: 100% !important;
+  }
+  .about {
+    height: 100%;
+  }
+  .reviews {
+    height: 100%;
+  }
+  .shop {
+    height: 100%;
+  }
+  .shop h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+  .about {
+    height: 100%;
+  }
+  .reviews {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+  .header {
+    padding: 6rem 0;
+    height: 100%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -337,6 +384,7 @@ nav.active i {
   }
   .about {
     height: 100%;
+    padding-top: 3rem;
   }
   .about img {
     display: none;
@@ -347,5 +395,23 @@ nav.active i {
   }
   .shop {
     height: 100%;
+  }
+  .shop h1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about {
+    height: 100%;
+  }
+  .shop {
+    height: 100%;
+  }
+  .shop .card {
+    height: 100%;
+  }
+  .shop h1 {
+    font-size: 3.4rem;
   }
 }
